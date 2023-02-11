@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Music Stream Design</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link href="css/build.css" rel="stylesheet" />
+    </head>
+    <body class="bg-[#212121] font-manrope">
+        <div class="mx-auto mb-28 flex max-w-[1440px]">
+            <aside class="w-[20%] bg-[#212121] py-9">
+                <header class="px-8">
+                    <img
+                        src="img/Logo.png"
+                        alt="Logo Musicium"
+                        class="h-11 w-36"
+                    />
+                </header>
+                <nav class="flex flex-col gap-10 my-10">
+                    <ul class="flex flex-col">
+                        <li>
+                            <a href="#" class="flex items-center gap-4 px-8 py-3 font-semibold text-white bg-gradient-to-r from-white/60 to-white/0">
+                                <img src="img/icon/home.svg" alt="" /> Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center gap-4 px-8 py-3 font-medium text-white/70 hover:bg-gradient-to-r from-white/60 to-white/0 hover:font-semibold hover:text-white">
+                                <img
+                                    src="img/icon/discover.svg"
+                                    alt=""
+                                />Discover
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center gap-4 px-8 py-3 font-medium text-white/70 hover:bg-gradient-to-r from-white/60 to-white/0 hover:font-semibold hover:text-white">
+                                <img src="img/icon/radio.svg" alt="" />Radio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center gap-4 px-8 py-3 font-medium text-white/70 hover:bg-gradient-to-r from-white/60 to-white/0 hover:font-semibold hover:text-white">
+                                <img src="img/icon/albums.svg" alt="" />Albums
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center gap-4 px-8 py-3 font-medium text-white/70 hover:bg-gradient-to-r from-white/60 to-white/0 hover:font-semibold hover:text-white">
+                                <img src="img/icon/podcast.svg" alt="" />Podcast
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="flex flex-col">
+                        <div
+                            class="px-8 pb-3 text-xs font-bold tracking-widest uppercase text-white/70"
+                        >
+                            library
+                        </div>
+                        <li>
+                            <a href="#" class="flex items-center gap-4 px-8 py-3 font-medium text-white/70 hover:bg-gradient-to-r from-white/60 to-white/0 hover:font-semibold hover:text-white">
+                                <img
+                                    src="img/icon/music-square-add.svg"
+                                    alt=""
+                                />
+                                Recently Added
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center gap-4 px-8 py-3 font-medium text-white/70 hover:bg-gradient-to-r from-white/60 to-white/0 hover:font-semibold hover:text-white">
+                                <img
+                                    src="img/icon/Favorite.svg"
+                                    alt=""
+                                />Favorite Songs
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center gap-4 px-8 py-3 font-medium text-white/70 hover:bg-gradient-to-r from-white/60 to-white/0 hover:font-semibold hover:text-white">
+                                <img src="img/icon/local.svg" alt="" />Local
+                                Files
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="flex flex-col">
+                        <div
+                            class="flex items-center justify-between px-8 pb-3 text-xs font-bold tracking-widest uppercase text-white/70"
+                        >
+                            <span>Playlist</span>
+                            <img src="img/icon/plus.svg" alt="" />
+                        </div>
+                        <li>
+                            <a href="#" class="flex items-center gap-4 px-8 py-3 font-medium text-white/70 hover:bg-gradient-to-r from-white/60 to-white/0 hover:font-semibold hover:text-white">
+                                <img src="img/icon/playlist.svg" alt="" />
+                                Lo-fi Music
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center gap-4 px-8 py-3 font-medium text-white/70 hover:bg-gradient-to-r from-white/60 to-white/0 hover:font-semibold hover:text-white">
+                                <img src="img/icon/playlist.svg" alt="" />Best
+                                of Bon Jovi
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center gap-4 px-8 py-3 font-medium text-white/70 hover:bg-gradient-to-r from-white/60 to-white/0 hover:font-semibold hover:text-white">
+                                <img src="img/icon/playlist.svg" alt="" />Best
+                                of John Mayer
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <main class="w-[60%] bg-[#121212] p-8">
+                <!-- Nav -->
+                <nav class="flex justify-between mb-10">
+                    <div class="flex gap-6">
+                        <div
+                            class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#212121]"
+                        >
+                            <img src="img/icon/arrow-left.svg" alt="" />
+                        </div>
+                        <div
+                            class="flex items-center gap-3 text-sm font-semibold"
+                        >
+                            <p class="text-white/70">Home</p>
+                            <img src="img/icon/arrow-right.svg" alt="" />
+                            <p class="text-white">Popular Artist</p>
+                        </div>
+                    </div>
+                    <div class="relative flex gap-6">
+                        <div class="flex items-center">
+                            <input
+                                type="text"
+                                placeholder="Search music, artist, albums..."
+                                class="w-full rounded-xl bg-[#212121] px-12 py-2 text-sm text-[#797979]"
+                            />
+                            <img
+                                src="img/icon/search.svg"
+                                alt=""
+                                class="absolute left-4"
+                            />
+                        </div>
+                        <div
+                            class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#212121]"
+                        >
+                            <img src="img/icon/notification.svg" alt="" />
+                        </div>
+                    </div>
+                </nav>
+                <!-- End Nav -->
+                <!-- Banner -->
+                <section class="mb-8 h-[296px] rounded-2xl bg-banner">
+                    <div class="flex w-full h-full">
+                        <div class="flex flex-col justify-center w-1/2 px-10">
+                            <div class="mb-10">
+                                <div class="flex gap-2 mb-2">
+                                    <img src="img/icon/verified.svg" alt="" />
+                                    <p class="font-medium text-white/70">
+                                        Verified Artist
+                                    </p>
+                                </div>
+                                <h1 class="mb-4 text-5xl font-bold text-white">
+                                    Ed Sheeran
+                                </h1>
+                                <div class="flex gap-2">
+                                    <img src="img/icon/headphone.svg" alt="" />
+                                    <p class="text-white/70">
+                                        <span class="font-bold text-white"
+                                            >82,736,050</span
+                                        >
+                                        monthly listeners
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex gap-2">
+                                <a
+                                    href=""
+                                    class="rounded-[2.5rem] border border-green-500 bg-green-500 px-6 py-3 font-bold uppercase tracking-wider text-white"
+                                    >Play</a
+                                >
+                                <a
+                                    href=""
+                                    class="flex items-center gap-2 rounded-[2.5rem] border border-white px-6 py-3 font-bold uppercase tracking-wider text-white"
+                                >
+                                    <img src="img/icon/check.svg" alt="" />
+                                    Following
+                                </a>
+                            </div>
+                        </div>
+                        <div class="relative flex-1">
+                            <img
+                                src="img/Ed Sheeran.png"
+                                alt=""
+                                class="absolute bottom-0 h-[363px] w-[429px]"
+                            />
+                        </div>
+                    </div>
+                </section>
+                <!-- End Banner -->
+                <!-- Popular -->
+                <section class="w-full">
+                    <div class="mb-8">
+                        <div class="flex justify-between mb-5">
+                            <h3 class="text-xl font-bold text-white">
+                                Popular
+                            </h3>
+                            <a href="" class="font-semibold text-green-500"
+                                >See All</a
+                            >
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="flex py-2 text-white popular"></div>
+                            <hr class="border-[#4D4D4D]" />
+                            <div
+                                class="flex py-2 text-white popular bg-gradient-to-r from-white/0 via-white/40 to-white/0"
+                            ></div>
+                            <hr class="border-[#4D4D4D]" />
+                            <div class="flex py-2 text-white popular"></div>
+                            <hr class="border-[#4D4D4D]" />
+                            <div class="flex py-2 text-white popular"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="mb-5 text-xl font-bold text-white">
+                            Popular Releases
+                        </h3>
+                        <div class="flex items-center justify-between">
+                            <div class="popular-release"></div>
+                            <div class="popular-release"></div>
+                            <div class="popular-release"></div>
+                            <div class="popular-release"></div>
+                            <div class="popular-release"></div>
+                            <div class="popular-release"></div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End Popular -->
+            </main>
+            <aside class="w-[20%] bg-[#212121] p-8">
+                <!-- Profile -->
+                <div class="flex items-center justify-between mb-10">
+                    <div class="flex gap-4">
+                        <img src="img/Profile.png" alt="" class="w-12 h-12" />
+                        <div class="flex flex-col">
+                            <h3 class="font-semibold text-white">
+                                James Rodriguez
+                            </h3>
+                            <div
+                                class="flex items-center gap-2 text-xs text-white/70"
+                            >
+                                Premium
+                                <span>&#183;</span>
+                                <img
+                                    src="img/icon/premium.svg"
+                                    alt=""
+                                    class="w-4 h-4"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <img src="img/icon/chevron-down.svg" alt="" />
+                </div>
+                <!-- End Profile -->
+                <!-- Like -->
+                <div class="flex flex-col gap-4 mb-8">
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-xl font-bold text-white">
+                            Fans Also Like
+                        </h2>
+                        <a href="" class="font-semibold text-green-600"
+                            >See All</a
+                        >
+                    </div>
+                    <div>
+                        <div class="relative w-full h-full mb-3">
+                            <div class="absolute w-full h-full">
+                                <div
+                                    class="absolute bottom-0 z-20 p-4 space-y-1"
+                                >
+                                    <h4
+                                        class="text-sm font-semibold text-white"
+                                    >
+                                        James Arthur
+                                    </h4>
+                                    <p class="text-xs text-white/70">Artist</p>
+                                </div>
+                                <div
+                                    class="absolute bottom-0 w-full h-20 rounded-b-2xl bg-gray-700/20 backdrop-blur-md"
+                                ></div>
+                            </div>
+                            <img
+                                src="img/James Arthur.png"
+                                alt=""
+                                class="rounded-2xl"
+                            />
+                        </div>
+                        <div class="flex items-center justify-center gap-2">
+                            <div class="w-2 h-2 bg-white rounded-full"></div>
+                            <div class="w-2 h-2 rounded-full bg-white/40"></div>
+                            <div class="w-2 h-2 rounded-full bg-white/40"></div>
+                            <div class="w-2 h-2 rounded-full bg-white/40"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Like -->
+                <!-- Recent -->
+                <div class="flex flex-col gap-4 mb-8">
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-xl font-bold text-white">
+                            Recent Played
+                        </h2>
+                        <a href="" class="font-semibold text-green-600"
+                            >See All</a
+                        >
+                    </div>
+                    <div class="flex flex-col gap-5">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center justify-center gap-3">
+                                <img
+                                    src="img/recent played/Ed Sheeran - Perfect - Shape of You.png"
+                                    alt=""
+                                    class="h-11 w-11"
+                                />
+                                <div class="flex flex-col">
+                                    <h4 class="text-sm font-bold text-white">
+                                        Perfect
+                                    </h4>
+                                    <p class="text-xs text-white/70">
+                                        Ed Sheeran
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="text-xs text-white">2min ago</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center justify-center gap-3">
+                                <img
+                                    src="img/recent played/Hanin Dhiya, Ah...png"
+                                    alt=""
+                                    class="h-11 w-11"
+                                />
+                                <div class="flex flex-col">
+                                    <h4 class="text-sm font-bold text-white">
+                                        Roman Picisan
+                                    </h4>
+                                    <p class="text-xs text-white/70">
+                                        Hanin Dhiya, Ah..
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="text-xs text-white">8min ago</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center justify-center gap-3">
+                                <img
+                                    src="img/recent played/Meghan Trainor.png"
+                                    alt=""
+                                    class="h-11 w-11"
+                                />
+                                <div class="flex flex-col">
+                                    <h4 class="text-sm font-bold text-white">
+                                        Title (Deluxe)
+                                    </h4>
+                                    <p class="text-xs text-white/70">
+                                        Meghan Trainor
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="text-xs text-white">1hr ago</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center justify-center gap-3">
+                                <img
+                                    src="img/recent played/Ed Sheeran - Shiver - Bad.png"
+                                    alt=""
+                                    class="h-11 w-11"
+                                />
+                                <div class="flex flex-col">
+                                    <h4 class="text-sm font-bold text-white">
+                                        Shiver
+                                    </h4>
+                                    <p class="text-xs text-white/70">
+                                        Ed Sheeran
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="text-xs text-white">4hr ago</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center justify-center gap-3">
+                                <img
+                                    src="img/recent played/Jaymes Young.png"
+                                    alt=""
+                                    class="h-11 w-11"
+                                />
+                                <div class="flex flex-col">
+                                    <h4 class="text-sm font-bold text-white">
+                                        Feel Something
+                                    </h4>
+                                    <p class="text-xs text-white/70">
+                                        Jaymes Young
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="text-xs text-white">5hr ago</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center justify-center gap-3">
+                                <img
+                                    src="img/recent played/Ed Sheeran - Perfect - Shape of You.png"
+                                    alt=""
+                                    class="h-11 w-11"
+                                />
+                                <div class="flex flex-col">
+                                    <h4 class="text-sm font-bold text-white">
+                                        Shape of You
+                                    </h4>
+                                    <p class="text-xs text-white/70">
+                                        Ed Sheeran
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="text-xs text-white">12hr ago</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center justify-center gap-3">
+                                <img
+                                    src="img/recent played/Ed Sheeran - Shiver - Bad.png"
+                                    alt=""
+                                    class="h-11 w-11"
+                                />
+                                <div class="flex flex-col">
+                                    <h4 class="text-sm font-bold text-white">
+                                        Bad Habits
+                                    </h4>
+                                    <p class="text-xs text-white/70">
+                                        Ed Sheeran
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="text-xs text-white">14hr ago</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Recent -->
+            </aside>
+        </div>
+        <section
+            class="fixed bottom-0 mx-auto h-28 w-full bg-[#121212]/60 backdrop-blur-3xl"
+        >
+            <div
+                class="relative flex justify-between p-8"
+            >
+                <div class="flex items-center gap-8">
+                    <div class="flex items-center gap-4">
+                        <img
+                            src="img/recent played/Ed Sheeran - Perfect - Shape of You.png"
+                            alt=""
+                            class="w-16 h-16"
+                        />
+                        <div>
+                            <h6 class="text-lg font-semibold text-white">
+                                Shape of You
+                            </h6>
+                            <p class="text-sm text-white/70">Ed Sheeran</p>
+                        </div>
+                    </div>
+                    <img src="img/icon/like.svg" class="w-6 h-6" alt="" />
+                </div>
+                <div class="flex items-center gap-8">
+                    <img src="img/icon/shuffle.svg" alt="" class="w-6 h-6" />
+                    <img src="img/icon/previous.svg" alt="" class="w-6 h-6" />
+                    <div
+                        class="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-bl from-white to-white/40"
+                    >
+                        <img src="img/icon/pause.svg" alt="" class="w-6 h-6" />
+                    </div>
+                    <img src="img/icon/next.svg" alt="" class="w-6 h-6" />
+                    <img src="img/icon/repeate.svg" alt="" class="w-6 h-6" />
+                </div>
+                <div class="flex items-center gap-6">
+                    <p class="text-white/70">1:45 / 4:42</p>
+                    <div class="flex items-center gap-4">
+                        <img src="img/icon/volume.svg" alt="" class="w-6 h-6" />
+                        <div
+                            class="relative h-1 w-[99px] rounded-lg border-none bg-[#4D4D4D]"
+                        >
+                            <div
+                                class="absolute top-0 w-9/12 h-1 bg-white border-none rounded-lg -left-1"
+                            ></div>
+                        </div>
+                    </div>
+                    <img src="img/icon/lirik.svg" alt="" class="w-6 h-6" />
+                </div>
+
+                <div
+                    class="absolute top-0 left-0 h-1 w-full bg-[#4D4D4D]"
+                ></div>
+                <div class="absolute top-0 left-0 w-5/12 h-1 bg-white"></div>
+            <!-- </div> -->
+        </section>
+
+        <script>
+            function popular(number, img, title, watch, time) {
+                let nmbr;
+                if (typeof number == 'number') {
+                    nmbr = `<p class='w-6 h-6 font-bold'>${number}</p>`;
+                } else {
+                    nmbr = `<img src="${number}" alt="" class="w-6 h-6">`;
+                }
+                return `<div class="flex items-center w-6/12 gap-4">
+                    ${nmbr}
+                    <img
+                        src="${img}"
+                        alt=""
+                        class="h-[54px] w-[54px]"
+                    />
+                    <h6 class="font-bold">${title}</h6>
+                </div>
+                <div class="flex items-center w-2/12 gap-2">
+                    <img src="img/icon/headphone.svg" alt="" />
+                    <p class="font-bold">${watch}</p>
+                </div>
+                <div
+                    class="flex items-center justify-end w-2/12 gap-2"
+                >
+                    <img src="img/icon/clock.svg" alt="" />
+                    <p class="font-bold">${time}</p>
+                </div>
+                <div
+                    class="flex items-center justify-end w-1/12"
+                >
+                    <img src="img/icon/like.svg" alt="" />
+                </div>
+                <div
+                    class="flex items-center justify-end w-1/12"
+                >
+                    <img src="img/icon/dots.svg" alt="" />
+                </div>`;
+            }
+            const arPopular = [
+                [
+                    1,
+                    'img/recent played/Ed Sheeran - Shiver - Bad.png',
+                    'Shiver',
+                    '460,228,511',
+                    '3:27',
+                ],
+                [
+                    'img/icon/play-2.svg',
+                    'img/recent played/Ed Sheeran - Perfect - Shape of You.png',
+                    'Perfect',
+                    '1,952,015,881',
+                    '4:23',
+                ],
+                [
+                    3,
+                    'img/recent played/Ed Sheeran - Shiver - Bad.png',
+                    'Bad Habits',
+                    '850,545,959',
+                    '3:50',
+                ],
+                [
+                    4,
+                    'img/recent played/Ed Sheeran - Perfect - Shape of You.png',
+                    'Shape of You',
+                    '3,024,067,930',
+                    '3:53',
+                ],
+            ];
+
+            function popularRelease(img, title, desc) {
+                return `<div class="flex flex-col">
+                    <img
+                        src="${img}"
+                        alt=""
+                        class="mb-4 h-[118px] w-[118px]"
+                    />
+                    <div>
+                        <h6
+                            class="text-sm font-semibold text-white"
+                        >
+                            ${title}
+                        </h6>
+                        <p class="text-xs text-white/70">${desc}</p>
+                    </div>
+                </div>`;
+            }
+            const arPopularRelease = [
+                ['img/popular/Peru.png', 'Peru', 'Latest Releases • S..'],
+                ['img/popular/=.png', '=', '2021 • Album'],
+                ['img/popular/÷ (Deluxe).png', '÷ (Deluxe)', '2017 • Album'],
+                ['img/popular/X.png', 'x (Wembley Edit..', '2015 • Album'],
+                ['img/popular/No.png', 'No. 6 Collaborat..', '2019 • Album'],
+                [
+                    'img/popular/X other.png',
+                    'x (Delux Edition)',
+                    '2014 • Album',
+                ],
+            ];
+
+            const popu = document.querySelectorAll('.popular');
+            const popuRele = document.querySelectorAll('.popular-release');
+
+            popu.forEach((e, i) => {
+                e.innerHTML = popular(...arPopular[i]);
+            });
+            popuRele.forEach((e, i) => {
+                e.innerHTML = popularRelease(...arPopularRelease[i]);
+            });
+        </script>
+    </body>
+</html>
