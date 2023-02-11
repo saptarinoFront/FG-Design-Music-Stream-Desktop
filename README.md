@@ -6,7 +6,7 @@
 
 ### Links
 
--   Live Site URL: [Live Demo](https://saptarinofront.github.io/FG-Design-Music-Stream-Desktop/)
+-   Live Site URL: [Live Demo](https://saptarinofront.github.io/FG-Design-Music-Stream-Desktop/dist/)
 
 ## My process
 
