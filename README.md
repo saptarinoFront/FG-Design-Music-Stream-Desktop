@@ -15,7 +15,7 @@
 -   HTML5
 -   CSS With TailwindCSS
 
-## Author
+## Created by
 
 -   Instagram - [Saptarino](https://www.instagram.com/saptarinnn/?hl=id)
 
